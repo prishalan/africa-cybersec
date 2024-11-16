@@ -1,12 +1,12 @@
 // Constants
 const CONFIG = {
   scripts: {
-    particles: "vendors/particles.min.js",
-    popper: "vendors/popper.min.js",
-    tippy: "vendors/tippy-bundle.umd.min.js",
-    svgPanZoom: "vendors/svg-pan-zoom.min.js",
-    mapRenderer: "map-renderer.min.js",
-    sidebarHandler: "sidebar-handler.min.js",
+    particles: "./vendors/particles.min.js",
+    popper: "./vendors/popper.min.js",
+    tippy: "./vendors/tippy-bundle.umd.min.js",
+    svgPanZoom: "./vendors/svg-pan-zoom.min.js",
+    mapRenderer: "./map-renderer.min.js",
+    sidebarHandler: "./sidebar-handler.min.js",
   },
   dataUrl: "../assets/data/country-data.json",
 };
