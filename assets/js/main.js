@@ -1,14 +1,14 @@
 // Constants
 const CONFIG = {
   scripts: {
-    particles: "/assets/js/vendors/particles.min.js",
-    popper: "/assets/js/vendors/popper.min.js",
-    tippy: "/assets/js/vendors/tippy-bundle.umd.min.js",
-    svgPanZoom: "/assets/js/vendors/svg-pan-zoom.min.js",
-    mapRenderer: "/assets/js/map-renderer.min.js",
-    sidebarHandler: "/assets/js/sidebar-handler.min.js",
+    particles: "vendors/particles.min.js",
+    popper: "vendors/popper.min.js",
+    tippy: "vendors/tippy-bundle.umd.min.js",
+    svgPanZoom: "vendors/svg-pan-zoom.min.js",
+    mapRenderer: "map-renderer.min.js",
+    sidebarHandler: "sidebar-handler.min.js",
   },
-  dataUrl: "/assets/data/country-data.json",
+  dataUrl: "../assets/data/country-data.json",
 };
 
 // Helper function to load scripts

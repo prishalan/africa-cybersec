@@ -56,7 +56,7 @@
     <!-- Preload critical resources -->
     <link
       rel="preload"
-      href="/assets/data/country-data.json"
+      href="assets/data/country-data.json"
       as="fetch"
       crossorigin
     />
@@ -64,7 +64,7 @@
     <!-- Defer non-critical CSS -->
     <link
       rel="stylesheet"
-      href="/assets/css/main.min.css"
+      href="assets/css/main.min.css"
       media="print"
       onload="this.media='all'"
     />
@@ -92,11 +92,11 @@
     <div id="app">
       <header>
         <button class="toggle-btn" id="leftToggle" title="filter">
-          <img src="/assets/img/settings.svg" alt="filter" height="30px" />
+          <img src="assets/img/settings.svg" alt="filter" height="30px" />
         </button>
         <h1>Cybersecurity Policies in Africa</h1>
         <button class="toggle-btn" id="rightToggle" title="countries">
-          <img src="/assets/img/africa-whole.svg" alt="filter" height="30px" />
+          <img src="assets/img/africa-whole.svg" alt="filter" height="30px" />
         </button>
       </header>
       <div class="overlay" id="overlay"></div>
@@ -113,7 +113,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         // Load main application code
         const script = document.createElement("script");
-        script.src = "/assets/js/main.min.js";
+        script.src = "assets/js/main.min.js";
         script.onload = () => loadApp();
         document.body.appendChild(script);
       });
