@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity Policies in Africa</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Only critical styles needed for immediate render */
+      #splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1a1a1a;
+        background-image: linear-gradient(
+          to top right,
+          #071c39 0%,
+          #2c075a 100%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      .loader {
+        width: 80px;
+        height: 80px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      #app {
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+      }
+    </style>
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="/assets/data/country-data.json"
+      as="fetch"
+      crossorigin
+    />
+
+    <!-- Defer non-critical CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/css/main.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist&family=Orbitron&display=swap"
+      rel="preload"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist&family=Orbitron&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splash">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Main Content (initially hidden) -->
+    <div id="app">
+      <header>
+        <button class="toggle-btn" id="leftToggle" title="filter">
+          <img src="/assets/img/settings.svg" alt="filter" height="30px" />
+        </button>
+        <h1>Cybersecurity Policies in Africa</h1>
+        <button class="toggle-btn" id="rightToggle" title="countries">
+          <img src="/assets/img/africa-whole.svg" alt="filter" height="30px" />
+        </button>
+      </header>
+      <div class="overlay" id="overlay"></div>
+      <div class="content-wrapper" id="content-wrapper">
+        <aside></aside>
+        <main id="mapContainer"></main>
+        <aside></aside>
+      </div>
+    </div>
+
+    <!-- Initialize app -->
+    <script>
+      // Minimal initialization code that needs to be inline
+      document.addEventListener("DOMContentLoaded", () => {
+        // Load main application code
+        const script = document.createElement("script");
+        script.src = "/assets/js/main.min.js";
+        script.onload = () => loadApp();
+        document.body.appendChild(script);
+      });
+    </script>
+  </body>
+</html>
